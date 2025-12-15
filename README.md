@@ -7,6 +7,5 @@
 ## Heading 2
 ### Heading 3
 #### Heading 4
-<img width="1536" height="1024" alt="aaaa" src="https://github.com/user-attachments/assets/c9a96d37-6bcb-4791-954f-55b8d8ad698c" />
+<img width="417" height="232" alt="Capture" src="https://github.com/user-attachments/assets/c8643373-e737-4f44-a865-78917f2cdb94" />
 
-![Alt text](aaaa.png)
