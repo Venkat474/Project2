@@ -8,8 +8,31 @@
 ### Heading 3
 #### Heading 4
 <img width="417" height="232" alt="Capture" src="https://github.com/user-attachments/assets/c8643373-e737-4f44-a865-78917f2cdb94" />
-`CI-JOB` Any change in the github repository will trigger the job , Jenkins will pull the code from the github repository & it will build the artifact using the maven & it will push the artifact to the Ansible server ,on the Ansible server we are having the Docker installed & Ansible server will create the docker image using the artifact & then it will copy that Docker image to the Docker .`\
-once CI job is completed it will automatically trigger the CD job 
-`CD-JOB` Here we are having boost type server from where we will operate the Kubernetes it will pull the docker image from the docker hub & it will build the container over the Kubernetes which is our AWS EKS in this sceneraio .
-Once our CI-CD Job is completed we have our application ready 
+## CI Job
+
+Any change in the **GitHub repository** will trigger the **Jenkins job**.
+
+- Jenkins pulls the code from `GitHub`
+- Builds the artifact using `Maven`
+- Pushes the artifact to the **Ansible server**
+- Ansible server has `Docker` installed
+- Docker image is created using the artifact
+- Docker image is pushed to `Docker Hub`
+
+Once the **CI Job** is completed, it will **automatically trigger the CD Job**.
+## CD Job
+- A **Bastion (Jump) Server** is used to operate Kubernetes
+- Kubernetes commands are executed from the Bastion server
+- Docker image is pulled from `Docker Hub` & it will build the container over K8S which is ours AWS-EKS
+- Container is deployed on **Kubernetes**
+- Kubernetes cluster used is **AWS EKS**
+
+---
+
+## 🎯 Final Outcome
+Once the **CI–CD pipeline** is completed:
+- ✅ Application is built
+- ✅ Docker image is created
+- ✅ Application is deployed on **AWS EKS**
+- ✅ Application is ready to use
 
