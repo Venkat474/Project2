@@ -42,4 +42,5 @@ Once the **CI–CD pipeline** is completed:
 ---
 
 # 1.Install and Configure the Jenkins
-Go to AWS-Launch Instances-
+Go to AWS-Launch Instances- [Name-______] 
+
