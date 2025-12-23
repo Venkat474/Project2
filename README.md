@@ -42,5 +42,5 @@ Once the **CI–CD pipeline** is completed:
 ---
 
 # 1.Install and Configure the Jenkins
-Go to AWS-Launch Instances- [Name-______] 
+**Go to AWS** - Launch Instances - [Name-______] - [Application & OS Images- Amazon Linux(Amazon Linux 2 AMI(HVM)-Kernel 5.10,SSD Volume Type(Free Tier Eligible)] - [Instance type-t2.micro] - [keypair-create new one] - LaunchInstance(Copy PublicIPV4adresses)                                                                                                            **Go to MobaXterm** - [Session] - [SSH] - [Remotehost-pasteIPV4] - [
 
