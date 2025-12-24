@@ -1,1 +1,29 @@
-
+================================================Jenkins Installation==========================================================
+1.Ensure that your software packages are up to date on your instance by using the following command to perform a quick software update:    ($ sudo yum update –y ) 
+==============================================================================================================================
+2.Add the Jenkins repo using the following command:
+($ [ec2-user ~]$ sudo wget -O /etc/yum.repos.d/jenkins.repo
+https://pkg.jenkins.io/redhat-stable/jenkins.repo ) 
+==============================================================================================================================
+3.Import a key file from Jenkins-CI to enable installation from the package:
+(sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key)
+($ sudo yum upgrade ) 
+==============================================================================================================================
+4.This command enables the EPEL (Extra Packages for Enterprise Linux) repository on Amazon Linux to access and install extra software packages that are not available in the default repositories: ($ amazon-linux-extras install epel )
+==============================================================================================================================
+5.This command is used to install Java (OpenJDK 11) on Amazon Linux for running Java applications.
+($ sudo amazon-linux-extras install java-openjdk11 -y ) amazon-linux-extras in above represents → Amazon Linux package manager
+==============================================================================================================================
+6.Install Java:  ($ sudo yum install java-11-amazon-corretto -y)
+==============================================================================================================================
+7.Install Jenkins: ($ sudo yum install jenkins -y)
+==============================================================================================================================
+8.This command enables Jenkins to automatically start on system reboot. ($ sudo systemctl enable jenkins )
+==============================================================================================================================
+9.This command starts the Jenkins service so it begins running. ($ sudo systemctl start jenkins )
+==============================================================================================================================
+10. verify the installed Java runtime version ( $ java -version )
+    verify Java compiler version              ( $ javac -version )
+==============================================================================================================================
+11. This command shows whether Jenkins is running or not.  ( $ systemctl status jenkins )
+==============================================================================================================================
