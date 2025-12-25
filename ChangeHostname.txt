@@ -1,8 +1,10 @@
-========================================== WE NEED TO CHANGE THE HOSTNAME OF THE SERVER ===================================================
+========================================== WE NEED TO CHANGE THE HOSTNAME OF THE SERVER ==================================================
+Meaning is [root@ip-172-31-47-91 etc]#    ->    [ec2-user@JENKINS-SERVER ~]$
 $ hostname JENKINS-SERVER
 $ cd etc/
 $ vim hostname
 JENKINS-SERVER (Inside file remove everything just give this name which we need to give it to the server) :wq
 [ NOW WE HAVE CHANGED THE HOSTNAME OF THE SERVER ,so i need to reboot the server ]
-$ init 6 (system is rebooting wait for few minutes)
+$ init 6 (press R) server will reboot
+
 
