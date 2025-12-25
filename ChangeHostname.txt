@@ -1,1 +1,8 @@
+========================================== WE NEED TO CHANGE THE HOSTNAME OF THE SERVER ===================================================
+$ hostname JENKINS-SERVER
+$ cd etc/
+$ vim hostname
+JENKINS-SERVER (Inside file remove everything just give this name which we need to give it to the server) :wq
+[ NOW WE HAVE CHANGED THE HOSTNAME OF THE SERVER ,so i need to reboot the server ]
+$ init 6 (system is rebooting wait for few minutes)
 
