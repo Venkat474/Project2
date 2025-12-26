@@ -27,12 +27,25 @@ PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2_HOME:$M2          :wq
 [Till now we have setup the maven & we have configure the maven on the server on the same server which we have jenkins]
 ===================================INSTALL MAVEN PLUGIN AND CONFIGURE JENKINS FOR MAVEN====================================
 ➡️Copy public IP from EC2 = Go to Jenkins dashboard 
-= Manage Jenkins = Plugins = Available plugins = Maven Integration(Install without restart) (now plugin has been installed in maven now we need to configure that plugin)
-= Manage Jenkins = Tools = JDK->Add JDK->Name-java11 = JAVA_HOME->JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.19.0.7-1.amzn2.0.1.x86_64
+= Manage Jenkins 
+   = Plugins 
+   = Available plugins 
+   = Maven Integration(Install without restart)(now plugin has been installed in maven now we need to configure that plugin)
+= Manage Jenkins 
+   = Tools 
+   = JDK->Add JDK->Name-java11 
+   = JAVA_HOME->JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.19.0.7-1.amzn2.0.1.x86_64
 = Maven->Add Maven->Name-maven->untick Install automatically->MAVEN_HOME->/opt/maven->Apply->Save
-= Manage Jenkins = Plugins = Installed Plugins = Github Branch Source plugin(disable this) & Github plugin(enable this)=Restart once no job is running 
-Now we want to create test project & we want to create build = + New Item = name-Test-Maven-Build = Maven project = ok = description-Test Maven Build = Source Code Management->Git->
+= Manage Jenkins 
+   = Plugins 
+   = Installed Plugins 
+   = Github Branch Source plugin(disable this) & Github plugin(enable this)
+   = Restart once no job is running 
+===========================    Now we want to create test project & we want to create build    ======================================
+= + New Item = name-Test-Maven-Build = Maven project = ok 
+= description-Test Maven Build 
+= Source Code Management -> Git-> Repository URL-copy from registration-app(code-HTTPS) & paste here
+= Branch-*/main 
+= Build->Root POM(pom.xml)-> Goals and options-> clean install-> Apply-> save-> Build Now 
+= Dashboard-> Test-Maven-Build-> Workspace-> webapp-> targets-> webapp.war(this is final build file)
 ➡️[root@JENKINS-SERVER ~]# yum install git
-➡️
-➡️
-➡️
