@@ -1,5 +1,6 @@
-========================================== WE NEED TO CHANGE THE HOSTNAME OF THE SERVER ==================================================
-Meaning is [root@ip-172-31-47-91 etc]#    ->    [ec2-user@JENKINS-SERVER ~]$
+========================================= WE NEED TO CHANGE THE HOSTNAME OF THE SERVER =================================================
+Meaning is  we need to change [root@ip-172-31-47-91 etc]#    ->    [ec2-user@JENKINS-SERVER ~]$
+========================================================================================================================================
 $ hostname JENKINS-SERVER
 $ cd etc/
 $ vim hostname
