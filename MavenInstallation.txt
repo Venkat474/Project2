@@ -1,2 +1,32 @@
-➡️ go to root dir →$ sudo su 
-➡️$ cd ~ ➡️[root@JENKINS-SERVER ~]# pwd (O/P→/root)➡️# cd/opt ➡️# wget paste copied path ➡️ # ls (u can see tar.gz file downloaded) ➡️# tar -xzvf apache-maven-3.9.-bin.tar.gz (this cmd is to extract) ➡️# ls (u see the extracted file) ➡️(Now move this folder to maven folder)# mv apache-maven
+➡️Go to root dir →$ sudo su 
+➡️$ cd ~ 
+➡️[root@JENKINS-SERVER ~]# pwd              (O/P→/root)
+➡️# cd/opt 
+➡️# wget paste copied path  
+➡️# ls                                      (u can see tar.gz file downloaded) 
+➡️# tar -xzvf apache-maven-3.9._-bin.tar.gz (this cmd is to extract) 
+➡️# ls                                      (u see the extracted file) 
+➡️# mv apache-maven-3.9._ maven             (Now move this folder to maven folder)
+➡️# cd maven/bin/
+➡️# ./mvn -v                                (Here u can see folder has moved here)
+➡️# cd .. -> # ./mvn -v                     (If u go & see outside this folder apache file will not show) 
+➡️# cd ~
+➡️# pwd                                     (O/P→/root)
+➡️# ll -a                                   (.bash_profile we need to edit this file)(This cmd show the hidden files)
+➡️# vim .bash_profile
+   //enter below lines below the 2nd fi
+M2_HOME=/opt/maven
+M2=/opt/maven/bin
+JAVA_HOME=/usr/lib/jvm/java-11-openjdk-11.0.19.0.7-1.amzn2.0.1.x86_64   (Right click on the tab & Duplicate tab -># sudo su -># find / -name java-11*->u can see file here copy)
+PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2_HOME:$M2          :wq
+➡️# echo $PATH                             (Still it is not showing the path for the maven & the java)
+➡️# source .bash_profile                   (which will save the changes made to .bash_profile)
+➡️# echo $PATH                             (Now it is showing the complete path for maven also & binary folder of maven also)
+➡️# mvn -v                                 (before we see inside bin folder only we can see maven but now i am not in maven then also i am going to see maven this is important change we have done, now i can run the maven anywhere on the server)
+[Till now we have setup the maven & we have configure the maven on the server on the same server which we have jenkins]
+===================================INSTALL MAVEN PLUGIN AND CONFIGURE JENKINS FOR MAVEN====================================
+➡️
+➡️
+➡️
+➡️
+➡️
