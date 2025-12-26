@@ -1,1 +1,1 @@
-
+➡️ go to root dir →$ sudo su ➡️$ cd ~ ➡️[root@JENKINS-SERVER ~]# pwd (O/P→/root)➡️# cd/opt ➡️# wget paste copied path ➡️ # ls (u can see tar.gz file downloaded) ➡️# tar -xzvf apache-maven-3.9.-bin.tar.gz (this cmd is to extract) ➡️# ls (u see the extracted file) ➡️(Now move this folder to maven folder)# mv apache-maven
