@@ -22,7 +22,8 @@ PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2_HOME:$M2          :wq
 ➡️# echo $PATH                             (Still it is not showing the path for the maven & the java)
 ➡️# source .bash_profile                   (which will save the changes made to .bash_profile)
 ➡️# echo $PATH                             (Now it is showing the complete path for maven also & binary folder of maven also)
-➡️# mvn -v                                 (before we see inside bin folder only we can see maven but now i am not in maven then also i am going to see maven this is important change we have done, now i can run the maven anywhere on the server)
+➡️# mvn -v                                 
+(before we see inside bin folder only we can see maven but now i am not in maven then also i am going to see maven this is important change we have done, now i can run the maven anywhere on the server)
 [Till now we have setup the maven & we have configure the maven on the server on the same server which we have jenkins]
 ===================================INSTALL MAVEN PLUGIN AND CONFIGURE JENKINS FOR MAVEN====================================
 ➡️
