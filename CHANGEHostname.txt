@@ -1,1 +1,16 @@
-
+========================================= WE NEED TO CHANGE THE HOSTNAME OF THE SERVER =================================================
+Meaning is  we need to change [root@ip-172-31-47-91 etc]#    ->    [ec2-user@ansible-server ~]$
+========================================================================================================================================
+$ sudo su
+$ nano /etc/hostname
+ansible-server (Inside file remove everything just give this name which we need to give it to the server) :wq
+[ NOW WE HAVE CHANGED THE HOSTNAME OF THE SERVER ,so i need to reboot the server ]
+$ init 6 (press R) server will reboot
+[ I have to now create the one user in this server & add that username to the sudo userlist i will add the user ]
+$ sudo su
+$ useradd ansadmin
+$ passwd ansadmin          (i need to set the password for the user)
+new password: 2468
+re-type password: 2468
+$ visudo           (now i am adding the username to the sudo user list)(Press shift+G)
+ansadmin ALL=(ALL)       NOPASSWD: ALL      [//add this in sudo file from last 7 lines]    
