@@ -49,6 +49,32 @@ Once the **CI–CD pipeline** is completed:
 <br>➡️ Advanced SSH Settings 
 <br>➡️ [✔]Use private key-Provide private key from downloads → OK                                                              
 <br>**`Open Server`** - <br>$ sudo su <br>$ cd ~ <br>*Now we need to download & install jenkins using below .txt link* 🔗https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/  <br> 📄[View JenkinsInstallation.txt](JenkinsInstallation.txt)
+## Jenkins Installation
+1. Ensure that your software packages are up to date on your instance by using the following command to perform a quick software update:  $ sudo yum update -y
+2. Add the Jenkins repo using the following command:  $ sudo wget -O /etc/yum.repos.d/jenkins.repo  
+<br>https://pkg.jenkins.io/redhat-stable/jenkins.repo)
+<br>3. Import a key file from Jenkins-CI to enable installation from the package:  
+<br>(sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key)  
+<br>($ sudo yum upgrade)
+<br>4. This command enables the EPEL (Extra Packages for Enterprise Linux) repository on Amazon Linux to access and install extra software packages that are not available in the default repositories:  
+<br>($ amazon-linux-extras install epel)
+<br>5. This command is used to install Java (OpenJDK 11) on Amazon Linux for running Java applications.  
+<br>($ sudo amazon-linux-extras install java-openjdk11 -y)  
+<br>amazon-linux-extras → Amazon Linux package manager
+<br>6. Install Java:  
+<br>($ sudo yum install java-11-amazon-corretto -y)
+<br>7. Install Jenkins:  
+<br>($ sudo yum install jenkins -y)
+<br>8. This command enables Jenkins to automatically start on system reboot.  
+<br>($ sudo systemctl enable jenkins)
+<br>9. This command starts the Jenkins service so it begins running.  
+<br>($ sudo systemctl start jenkins)
+<br>10. Verify Java installation:  
+<br>Java runtime version:  ($ java -version)  
+<br>Java compiler version:  ($ javac -version)
+<br>11. This command shows whether Jenkins is running or not.  
+<br>($ systemctl status jenkins)
+
 <br>*Now we need to change the hostname of the server using below link*
 <br> 📄[view ChangeHostname.txt](ChangeHostname.txt)
 <br>(**Actually jenkins works on the port 8080 so wee need to do the changes as shown below**)                                                                      
@@ -71,8 +97,4 @@ Once the **CI–CD pipeline** is completed:
 # 3.Ansible Server Setup and Ansible Installation
 **`Go to EC2`** ➡️ Launch Instances ➡️ [Name-Ansible-Server] ➡️ [Application & OS Images- Amazon Linux(Amazon Linux 2 AMI(HVM)-Kernel 5.10,SSD Volume Type(Free Tier Eligible)] ➡️ [Instance type-t2.micro] ➡️ [keypair-Select existing one] ➡️ LaunchInstance ➡️ Security ➡️ security groups ➡️ EditInboundrule ➡️ Add rule ➡️ Portrange-8080-8090 ➡️ Source-AnywhereIPV4 ➡️ SaveRules (Copy PublicIPV4adresses) 
 <br>**`Go to MobaXterm`** ➡️ Session ➡️ SSH ➡️ Remotehost-pasteIPV4 ➡️ [✔] Specify username-*ec2-user* ➡️ Advanced SSH Settings ➡️ [✔]Use private key-Provide private key from downloads ➡️ OK    <br>*Now we need to change the hostname of the server using below link*  <br>📄 [view CHANGEHostname.txt](CHANGEHostname.txt)
-a
-b
-c
-d
 
