@@ -65,9 +65,9 @@ Once the **CI–CD pipeline** is completed:
 **[ec2-user ~]$** sudo yum install java-11-amazon-corretto -y
 7. Install Jenkins:
 **[ec2-user ~]$** sudo yum install jenkins -y
-8. This command enables Jenkins to automatically start on system reboot.
+8. This command enables Jenkins to automatically start on system reboot:
 **[ec2-user ~]$** sudo systemctl enable jenkins
-9. This command starts the Jenkins service so it begins running.
+9. This command starts the Jenkins service so it begins running:
 **[ec2-user ~]$** sudo systemctl start jenkins
 10. Verify Java installation :- <br> Java runtime version: **[ec2-user ~]$** java -version
 <br> Java compiler version: **[ec2-user ~]$** javac -version
