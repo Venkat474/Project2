@@ -59,7 +59,7 @@ Once the **CI–CD pipeline** is completed:
 <br> **[ec2-user ~]$** sudo yum upgrade
 4. This command enables the EPEL (Extra Packages for Enterprise Linux) repository on Amazon Linux to access and install extra software packages that are not available in the default repositories:
 <br> **[ec2-user ~]$** amazon-linux-extras install epel
-5. This command is used to install Java (OpenJDK 11) on Amazon Linux for running Java applications.
+5. This command is used to install Java (OpenJDK 11) on Amazon Linux for running Java applications:
     <br> **[ec2-user ~]$** sudo amazon-linux-extras install java-openjdk11 -y  <br> ( amazon-linux-extras in above represents → Amazon Linux package manager )
 6. Install Java:
 **[ec2-user ~]$** sudo yum install java-11-amazon-corretto -y
@@ -71,7 +71,7 @@ Once the **CI–CD pipeline** is completed:
 **[ec2-user ~]$** sudo systemctl start jenkins
 10. Verify Java installation :- <br> Java runtime version: **[ec2-user ~]$** java -version
 <br> Java compiler version: **[ec2-user ~]$** javac -version
-11. This command shows whether Jenkins is running or not.  **[ec2-user ~]$** systemctl status jenkins
+11. This command shows whether Jenkins is running or not:  **[ec2-user ~]$** systemctl status jenkins
 
 <br>*Now we need to change the hostname of the server using below link*
 <br> 📄[view ChangeHostname.txt](ChangeHostname.txt)
