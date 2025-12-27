@@ -47,12 +47,25 @@ Once the **CI–CD pipeline** is completed:
 <br>➡️ Remotehost-pasteIPV4 
 <br>➡️ [✔] Specify username-*ec2-user* 
 <br>➡️ Advanced SSH Settings 
-<br>➡️ [✔]Use private key-Provide private key from downloads 
-<br>➡️ OK                                                              
+<br>➡️ [✔]Use private key-Provide private key from downloads → OK                                                              
 <br>**`Open Server`** - <br>$ sudo su <br>$ cd ~ <br>*Now we need to download & install jenkins using below .txt link* 🔗https://www.jenkins.io/doc/tutorials/tutorial-for-installing-jenkins-on-AWS/  <br> 📄[View JenkinsInstallation.txt](JenkinsInstallation.txt)
 <br>*Now we need to change the hostname of the server using below link*
 <br> 📄[view ChangeHostname.txt](ChangeHostname.txt)
-<br>(**Actually jenkins works on the port 8080 so wee need to do the changes as shown below**)                                                                        <br>**`Go to EC2`** ➡️ Security ➡️ security groups ➡️ EditInboundrule ➡️ Add rule ➡️ Portrange-8080 ➡️ Source-AnywhereIPV4 ➡️ SaveRules                                    <br> 🚀 **`Jenkins setup on EC2 Instance`** Copy Public IPV4 address & paste it in new tab as shown [ 43.205.115.156:8080 ] now copy [var/lib..../initialAdminPassword] , Go to server [$ sudo su] [$ cat paste] now copy the password and paste in jenkins tab(Administrator password) → Continue ➡️ Customize Jenkins → Install suggested plugins ➡️ create admin user → Save and Continue ➡️ JenkinsURL → Save and Finish ➡️ Start using Jenkins.   
+<br>(**Actually jenkins works on the port 8080 so wee need to do the changes as shown below**)                                                                      
+<br>**`Go to EC2`** 
+<br>➡️ Security 
+<br>➡️ security groups 
+<br>➡️ EditInboundrule 
+<br>➡️ Add rule 
+<br>➡️ Portrange-8080 
+<br>➡️ Source-AnywhereIPV4 → SaveRules
+<br> 🚀 **`Jenkins setup on EC2 Instance`** Copy Public IPV4 address & paste it in new tab as shown [ 43.205.115.156:8080 ] now copy [var/lib..../initialAdminPassword] 
+-`Go to server`  
+<br>          $ sudo su 
+<br>          $ cat paste (now copy the password and paste in jenkins tab(Administrator password)) -> Continue 
+<br>➡️ Customize Jenkins → Install suggested plugins 
+<br>➡️ create admin user → Save and Continue 
+<br>➡️ JenkinsURL → Save and Finish → Start using Jenkins.   
 # 2.Install and Configure the Maven 
 **`Go to remote terminal of my jenkins server`** 🔗https://maven.apache.org/download.cgi and go to this link [Binary tar.gz archive → apache-maven-3.9._-bin.tar.gz] Copy link address <br> 📄 [View MavenInstallation.txt](MavenInstallation.txt) 
 # 3.Ansible Server Setup and Ansible Installation
